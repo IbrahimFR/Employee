@@ -1,13 +1,13 @@
-package com.epam.repo;
+package com.epam.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RepoApplication {
+public class RestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RepoApplication.class, args);
+		SpringApplication.run(RestApplication.class, args);
 	}
 
 }
