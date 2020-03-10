@@ -1,7 +1,15 @@
 package com.epam.repo.entities;
 
-public class Rate {
+import lombok.Data;
 
+import javax.persistence.*;
+
+@Data
+@Entity
+public class Rate {
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Long id;
    private String CAD;
    private String HKD;
    private String ISK;
@@ -35,5 +43,10 @@ public class Rate {
    private String ILS;
    private String KRW;
    private String PLN;
+
+   @OneToOne(fetch = FetchType.LAZY, optional = false)
+   @JoinColumn(name = "currency_id", nullable = false)
+   private Currency currency;
+
 
 }

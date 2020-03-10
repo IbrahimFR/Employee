@@ -1,15 +1,22 @@
 package com.epam.repo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
 
+import javax.persistence.*;
+import java.util.Date;
+
+
+@Data
 @Entity
 public class Currency {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private long id;
+    private String base;
+    private Date date;
+    @OneToOne(mappedBy = "currency", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Rate rate;
 
 }
