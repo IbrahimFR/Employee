@@ -1,9 +1,9 @@
-package com.epam.employee.models;
+package com.epam.employee.employee.models;
 
 import lombok.Data;
 
 @Data
-public class Employee {
+public class EmployeeModel {
 
     private String firstName;
     private String lastName;

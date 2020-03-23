@@ -1,4 +1,4 @@
-package com.epam.employee.rest;
+package com.epam.employee.employee.rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,10 +1,10 @@
-package com.epam.employee.models;
+package com.epam.employee.employee.models;
 
 import lombok.Data;
 
 
 @Data
-public class Rate {
+public class RateModel {
     private double CAD;
     private double HKD;
     private double ISK;
