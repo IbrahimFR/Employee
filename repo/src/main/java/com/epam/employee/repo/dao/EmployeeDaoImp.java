@@ -1,6 +1,6 @@
-package com.epam.repo.dao;
+package com.epam.employee.repo.dao;
 
-import com.epam.repo.entities.Employee;
+import com.epam.employee.repo.entities.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

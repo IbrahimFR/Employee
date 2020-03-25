@@ -1,4 +1,4 @@
-package com.epam.repo.entities;
+package com.epam.employee.repo.entities;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.epam.employee.employee.models;
+package com.epam.employee.models;
 
 import lombok.Data;
 

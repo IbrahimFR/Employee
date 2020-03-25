@@ -1,4 +1,4 @@
-package com.epam.employee.employee.constants;
+package com.epam.employee.constants;
 
 import java.text.SimpleDateFormat;
 

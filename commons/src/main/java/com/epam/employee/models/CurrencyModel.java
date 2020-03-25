@@ -1,6 +1,6 @@
-package com.epam.employee.employee.models;
+package com.epam.employee.models;
 
-import com.epam.employee.employee.constants.Constants;
+import com.epam.employee.constants.Constants;
 import lombok.Data;
 
 import java.text.ParseException;

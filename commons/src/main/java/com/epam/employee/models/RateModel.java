@@ -1,8 +1,6 @@
-package com.epam.employee.employee.models;
+package com.epam.employee.models;
 
 import lombok.Data;
-
-
 @Data
 public class RateModel {
     private double CAD;

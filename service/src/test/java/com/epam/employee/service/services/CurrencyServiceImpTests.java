@@ -1,11 +1,9 @@
-package com.epam.service.services;
+package com.epam.employee.service.services;
 
 import com.epam.employee.models.CurrencyModel;
 import com.epam.employee.models.EmployeeModel;
 import com.epam.employee.models.RateModel;
-import com.epam.repo.entities.Currency;
-import com.epam.repo.entities.Employee;
-import com.epam.repo.entities.Rate;
+import com.epam.employee.repo.entities.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.modelmapper.ModelMapper;

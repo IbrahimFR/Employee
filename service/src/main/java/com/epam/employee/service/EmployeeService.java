@@ -1,4 +1,4 @@
-package com.epam;
+package com.epam.employee.service;
 
 import com.epam.employee.models.EmployeeModel;
 import org.springframework.stereotype.Service;

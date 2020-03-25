@@ -1,8 +1,8 @@
-package com.epam.service.services;
+package com.epam.employee.service.services;
 
 import com.epam.employee.models.EmployeeModel;
-import com.epam.repo.dao.EmployeeDaoImp;
-import com.epam.repo.entities.Employee;
+import com.epam.employee.repo.dao.EmployeeDaoImp;
+import com.epam.employee.repo.entities.Employee;
 import org.junit.runner.RunWith;
 import org.junit.Test;
 import org.modelmapper.ModelMapper;
@@ -13,7 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(SpringRunner.class)

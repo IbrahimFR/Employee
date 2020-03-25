@@ -1,9 +1,9 @@
-package com.epam.repo.dao;
+package com.epam.employee.repo.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import com.epam.repo.entities.Employee;
+import com.epam.employee.repo.entities.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.epam;
+package com.epam.employee.service;
 
 import com.epam.employee.models.CurrencyModel;
 import com.epam.employee.repo.dao.CurrencyDaoImp;
