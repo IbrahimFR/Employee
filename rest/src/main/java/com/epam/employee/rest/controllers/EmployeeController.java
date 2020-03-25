@@ -1,4 +1,4 @@
-package com.epam;
+package com.epam.employee.rest.controllers;
 
 import com.epam.employee.models.EmployeeModel;
 import com.epam.employee.service.EmployeeServiceImp;
@@ -41,13 +41,13 @@ public class EmployeeController {
              return HttpStatus.NOT_FOUND;
     }
 
-    @GetMapping("/getall/")
+    @GetMapping("/getall")
     @ResponseStatus(HttpStatus.OK)
     public Iterable<EmployeeModel> getEmployees() {
         return employeeServiceImp.getEmployees();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     @ResponseStatus(HttpStatus.OK)
     public EmployeeModel getEmployeeById(@PathVariable long id)
     {
