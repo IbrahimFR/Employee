@@ -1,7 +1,6 @@
-package com.epam.employee.service.services;
+package com.epam.employee.service;
 
 import com.epam.employee.models.CurrencyModel;
-import com.epam.employee.models.EmployeeModel;
 import com.epam.employee.models.RateModel;
 import com.epam.employee.repo.entities.*;
 import org.junit.Test;
@@ -30,7 +29,7 @@ public class CurrencyServiceImpTests {
     }
 
     @Test
-    public void whenConvertCurrencyEntityToCurrencyModel_thenCorrect() {
+    public void convertCurrencyEntityToCurrencyModel() {
         Rate rate = new Rate();
         rate.setINR(0.2466767148);
         rate.setEUR(0.0029553447);
@@ -45,7 +44,7 @@ public class CurrencyServiceImpTests {
         assertEquals(currency.getRate().getEUR(), currencyModel.getRate().getEUR());
     }
     @Test
-    public void whenConvertCurrencyModelToCurrencyEntity_thenCorrect() {
+    public void convertCurrencyModelToCurrencyEntity() {
         RateModel rateModel = new RateModel();
         rateModel.setINR(0.2466767148);
         rateModel.setEUR(0.0029553447);

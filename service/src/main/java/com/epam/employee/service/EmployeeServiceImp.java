@@ -26,8 +26,8 @@ public class EmployeeServiceImp implements EmployeeService {
 
     @Override
     public EmployeeModel updateEmployee(EmployeeModel employeeModel) {
-        Employee createdEmployee = employeeDaoImp.save(toEntity(employeeModel));
-        return toModel(createdEmployee);
+        Employee updatedEmployee = employeeDaoImp.save(toEntity(employeeModel));
+        return toModel(updatedEmployee);
     }
 
     @Override
@@ -59,11 +59,9 @@ public class EmployeeServiceImp implements EmployeeService {
     }
 
     private EmployeeModel toModel(Employee employee) {
-        EmployeeModel employeeModel = modelMapper.map(employee, EmployeeModel.class);
-        return employeeModel;
+        return modelMapper.map(employee, EmployeeModel.class);
     }
     private Employee toEntity(EmployeeModel employeeModel) {
-        Employee employee = modelMapper.map(employeeModel, Employee.class);
-        return employee;
+        return modelMapper.map(employeeModel, Employee.class);
     }
 }

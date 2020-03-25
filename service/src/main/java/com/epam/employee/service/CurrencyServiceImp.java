@@ -30,11 +30,9 @@ public class CurrencyServiceImp implements CurrencyService{
 
 
     private CurrencyModel toModel(Currency currency) {
-        CurrencyModel currencyModel = modelMapper.map(currency, CurrencyModel.class);
-        return currencyModel;
+        return modelMapper.map(currency, CurrencyModel.class);
     }
     private Currency toEntity(CurrencyModel currencyModel) {
-        Currency currency = modelMapper.map(currencyModel, Currency.class);
-        return currency;
+        return modelMapper.map(currencyModel, Currency.class);
     }
 }

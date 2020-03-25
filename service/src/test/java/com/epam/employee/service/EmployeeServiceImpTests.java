@@ -1,13 +1,10 @@
-package com.epam.employee.service.services;
+package com.epam.employee.service;
 
 import com.epam.employee.models.EmployeeModel;
-import com.epam.employee.repo.dao.EmployeeDaoImp;
 import com.epam.employee.repo.entities.Employee;
 import org.junit.runner.RunWith;
 import org.junit.Test;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.hamcrest.Matchers.notNullValue;
@@ -29,7 +26,7 @@ public class EmployeeServiceImpTests {
     }
 
     @Test
-    public void whenConvertEmployeeEntityToEmployeeModel_thenCorrect() {
+    public void convertEmployeeEntityToEmployeeModel() {
         Employee employee = new Employee();
         employee.setFirstName("ibrahim");
         employee.setLastName("fouad");
@@ -42,7 +39,7 @@ public class EmployeeServiceImpTests {
     }
 
     @Test
-    public void whenConvertEmployeeModelToEmployeeEntity_thenCorrect() {
+    public void convertEmployeeModelToEmployeeEntity() {
         EmployeeModel employeeModel = new EmployeeModel();
         employeeModel.setFirstName("ibrahim");
         employeeModel.setLastName("fouad");
