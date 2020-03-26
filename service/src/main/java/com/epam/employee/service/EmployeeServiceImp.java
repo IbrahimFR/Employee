@@ -60,9 +60,15 @@ public class EmployeeServiceImp implements EmployeeService {
     }
 
     private EmployeeModel toModel(Employee employee) {
-        return modelMapper.map(employee, EmployeeModel.class);
+        if(employee!=null)
+            return modelMapper.map(employee, EmployeeModel.class);
+        else
+            return null;
     }
     private Employee toEntity(EmployeeModel employeeModel) {
-        return modelMapper.map(employeeModel, Employee.class);
+        if(employeeModel!=null)
+           return modelMapper.map(employeeModel, Employee.class);
+        else
+          return null;
     }
 }
