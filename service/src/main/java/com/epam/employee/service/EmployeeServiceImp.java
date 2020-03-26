@@ -5,11 +5,12 @@ import com.epam.employee.repo.dao.EmployeeDaoImp;
 import com.epam.employee.repo.entities.Employee;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+@Service
 public class EmployeeServiceImp implements EmployeeService {
 
     @Autowired
