@@ -1,5 +1,6 @@
 package com.epam.employee.service;
 
+import com.epam.employee.models.CurrencyConverterModel;
 import com.epam.employee.models.CurrencyModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,24 +22,24 @@ public class CurrencyConverterServiceImp implements CurrencyConverterService {
     @Value("${curencies.target-rate.url}")
     private String currencyRateByTargetsUrl;
 
-    @Autowired
-    RestTemplate restTemplate;
+
+    RestTemplate restTemplate = new RestTemplate();
 
 
 
     @Override
-    public CurrencyModel getCurrencyRate(String base) {
+    public CurrencyConverterModel getCurrencyRate(String base) {
         String url = String.format(
                 currencyRateUrl, base);
         return restTemplate
-                .getForObject(url, CurrencyModel.class);
+                .getForObject(url, CurrencyConverterModel.class);
     }
 
     @Override
-    public CurrencyModel getCurrencyRateByTargets(String base, Set<String> targets) {
+    public CurrencyConverterModel getCurrencyRateByTargets(String base, Set<String> targets) {
         String target = String.join(",", targets);
         String url = String.format(currencyRateByTargetsUrl, target, base);
         return restTemplate
-                .getForObject(url, CurrencyModel.class);
+                .getForObject(url, CurrencyConverterModel.class);
     }
 }
