@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -41,7 +42,12 @@ public class EmployeeServiceImp implements EmployeeService {
 
     @Override
     public EmployeeModel getEmployeeById(long id) {
-        return toModel(employeeDaoImp.findById(id).get());
+        Optional<Employee> employee = employeeDaoImp.findById(id);
+        if(employee.isPresent()){
+            return toModel(employee.get());
+        }
+        else
+            return null;
     }
 
     @Override
