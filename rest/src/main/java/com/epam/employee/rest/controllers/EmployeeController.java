@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = URIs.api+URIs.version)
+@RequestMapping(value = URIs.api+URIs.version+URIs.employee)
 public class EmployeeController {
     @Autowired
     private EmployeeServiceImp employeeServiceImp;
@@ -41,7 +41,7 @@ public class EmployeeController {
         if(employeeServiceImp.getEmployeeById(employeeModel.getId())!=null) {
             employeeServiceImp.deleteEmployee(employeeModel);
             return ResponseEntity.status(HttpStatus.OK)
-                    .body(employeeServiceImp.updateEmployee(employeeModel));
+                    .body(employeeModel);
         }
         else
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
